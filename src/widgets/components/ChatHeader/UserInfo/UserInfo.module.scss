@@ -1,0 +1,32 @@
+@use '@shared/styles/mixins' as *;
+
+.user-info {
+    display: flex;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+    &>img {
+        object-fit: cover;
+    }
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.name {
+    @include text-title;
+}
+
+.description {
+    @include text-description;
+}

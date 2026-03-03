@@ -1,0 +1,19 @@
+.chat {
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        position: sticky;
+        top: 0;
+    }
+
+    &__message-list {
+        flex: 1;
+
+    }
+
+    &__input {
+        position: sticky;
+        bottom: 0;
+    }
+}

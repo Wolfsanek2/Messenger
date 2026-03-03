@@ -1,0 +1,11 @@
+@use '@shared/styles' as *;
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    &__chat {
+        flex: 1;
+    }
+}

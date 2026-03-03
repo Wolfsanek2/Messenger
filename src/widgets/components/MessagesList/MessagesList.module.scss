@@ -1,0 +1,17 @@
+.messages-lists {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: var(--bg-color);
+}
+
+.message-container {
+    display: flex;
+
+    &_mine {
+        flex-direction: row-reverse;
+    }
+}
+
+.message {}

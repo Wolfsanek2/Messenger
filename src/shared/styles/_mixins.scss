@@ -1,0 +1,7 @@
+@mixin text-title {
+    color: var(--color-title);
+}
+
+@mixin text-description {
+    color: var(--color-secondary);
+}

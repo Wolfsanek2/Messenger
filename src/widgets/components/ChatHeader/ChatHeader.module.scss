@@ -1,0 +1,11 @@
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color-accent);
+    padding: 1rem;
+}
+
+.header-additional {
+    display: flex;
+    gap: 1rem;
+}
