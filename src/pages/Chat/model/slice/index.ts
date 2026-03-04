@@ -1,1 +1,1 @@
-export * from './ChatSlice';
+export * from './chatSlice';

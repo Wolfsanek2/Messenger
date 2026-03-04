@@ -1,1 +1,1 @@
-export * from './ChatMiddleware';
+export * from './chatMiddleware';
