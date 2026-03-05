@@ -15,6 +15,7 @@
 			"@entities": ["./src/entities/"],
 			"@entities/*": ["./src/entities/*"],
 			"@widgets": ["./src/widgets/"],
+			"@widgets/*": ["./src/widgets/*"],
 			"@pages": ["./src/pages/"],
 			"@pages/*": ["./src/pages/*"],
 			"@app": ["./src/app/"],

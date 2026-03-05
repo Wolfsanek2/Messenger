@@ -1,0 +1,32 @@
+.message {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 50%;
+    padding: 0 0.5rem;
+    background-color: var(--bg-color-tertiary);
+    border-radius: 0.5rem;
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+        max-width: 100%;
+    }
+
+    &__text {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    &__time {
+        display: flex;
+        align-items: end;
+        margin: 0.5rem 0 0 2rem;
+        font-size: 0.75rem;
+    }
+
+    &--mine {
+        background-color: var(--bg-color-secondary);
+    }
+}

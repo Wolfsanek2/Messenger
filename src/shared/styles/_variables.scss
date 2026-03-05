@@ -1,12 +1,16 @@
 :root {
     --color-title: white;
     --color-primary: black;
+    --color-primary-2: #6d6719;
     --color-secondary: rgb(161, 159, 159);
 
-    --bg-color: #f8e5f1;
-    --bg-color-primary: white;
-    --bg-color-accent: #8d2e8d;
-    --bg-color-accent-light: #f5c0f5;
+    --bg-color-primary: #8d2e8d;
+    --bg-color-primary-2: #e4d722;
+    --bg-color-secondary: #f5c0f5;
+    --bg-color-tertiary: white;
+    --bg-color-body: #f8e5f1;
 
     --border: 1px solid #969696;
+
+    --header-height: 8vh;
 }

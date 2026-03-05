@@ -3,7 +3,7 @@ import { Icon } from '@shared';
 
 export const UserInfo = () => {
 	return (
-		<div className={styles.userInfo}>
+		<div className={styles['user-info']}>
 			<Icon className={styles.avatar} url="/Messenger/Котик.jpg" />
 			<div className={styles.title}>
 				<div className={styles.name}>Дженнифер</div>

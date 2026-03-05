@@ -1,11 +1,18 @@
-.chat-header {
+.header {
     display: flex;
     justify-content: space-between;
-    background-color: var(--bg-color-accent);
+    align-items: center;
+    background-color: var(--bg-color-primary);
     padding: 1rem;
-}
 
-.header-additional {
-    display: flex;
-    gap: 1rem;
+    &__back {
+        height: 80%;
+        aspect-ratio: 1 / 1;
+    }
+
+    &__additional {
+        display: flex;
+        gap: 1rem;
+
+    }
 }

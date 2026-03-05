@@ -3,13 +3,13 @@
     flex-direction: column-reverse;
     gap: 1rem;
     padding: 1rem 2rem;
-    background: var(--bg-color);
+    background: var(--bg-color-body);
 }
 
 .message-container {
     display: flex;
 
-    &_mine {
+    &--mine {
         flex-direction: row-reverse;
     }
 }

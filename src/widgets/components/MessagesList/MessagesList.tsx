@@ -12,17 +12,17 @@ export const MessagesList: React.FC<MessageListProps> = ({
 	className,
 }) => {
 	return (
-		<div className={cn(styles.messagesLists, className)}>
+		<div className={cn(styles['messages-lists'], className)}>
 			{messages.map(({ text, isMine, authorName, createdAt }, index) => (
 				<div
 					key={index}
 					className={cn(
-						styles.messageContainer,
-						isMine ? styles.messageContainerMine : '',
+						styles['message-container'],
+						isMine ? styles['message-container--mine'] : '',
 					)}
 				>
 					<Message
-						className={styles.message}
+						className={styles['message']}
 						text={text}
 						isMine={isMine}
 						time={createdAt}

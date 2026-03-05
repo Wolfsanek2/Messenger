@@ -2,6 +2,8 @@ import { cn, Icon, ICONS_URLS } from '@shared';
 import styles from './ChatInput.module.scss';
 import { useRef, useState, type KeyboardEvent } from 'react';
 
+import AttachmentIcon from '@shared/assets/icons/attachment.svg?react';
+
 interface ChatInputProps {
 	className?: string;
 	onEnter?: (text: string) => void;
@@ -20,7 +22,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({ className, onEnter }) => {
 		}
 	};
 	return (
-		<div className={cn(styles.inputContainer, className)}>
+		<div className={cn(styles['input-container'], className)}>
 			<input
 				className={styles['input-container__input']}
 				type="text"
@@ -30,7 +32,7 @@ export const ChatInput: React.FC<ChatInputProps> = ({ className, onEnter }) => {
 				ref={inputRef}
 				onKeyDown={onKeyDown}
 			/>
-			<Icon url={ICONS_URLS.ATTACHMENT} className={styles.attachment} />
+			<AttachmentIcon className={styles['input-container__attachment']} />
 		</div>
 	);
 };

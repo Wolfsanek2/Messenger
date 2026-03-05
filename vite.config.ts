@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+import svgr from 'vite-plugin-svgr';
 
 // https://vite.dev/config/
 export default defineConfig({
-	plugins: [react()],
+	plugins: [react(), svgr({ include: '**/*.svg?react' })],
 	base: '/Messenger/',
 	resolve: {
 		alias: {
@@ -13,11 +14,6 @@ export default defineConfig({
 			'@widgets': path.resolve(__dirname, './src/widgets'),
 			'@pages': path.resolve(__dirname, './src/pages'),
 			'@app': path.resolve(__dirname, './src/app'),
-		},
-	},
-	css: {
-		modules: {
-			localsConvention: 'camelCase',
 		},
 	},
 });
