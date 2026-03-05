@@ -1,4 +1,4 @@
-import { cn, Icon, ICONS_URLS } from '@shared';
+import { cn } from '@shared';
 import styles from './ChatInput.module.scss';
 import { useRef, useState, type KeyboardEvent } from 'react';
 
