@@ -1,7 +1,7 @@
-import { cn, PAGES_URLS } from '@shared';
+import { Button, cn, PAGES_URLS } from '@shared';
 import styles from './ChatHeader.module.scss';
 import { UserInfo } from './UserInfo';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 import ArrowBackIcon from '@shared/assets/icons/arrow_back.svg?react';
 import SearchIcon from '@shared/assets/icons/search.svg?react';
@@ -12,15 +12,38 @@ interface ChatHeaderProps {
 }
 
 export const ChatHeader: React.FC<ChatHeaderProps> = ({ className }) => {
+	const navigate = useNavigate();
 	return (
 		<div className={cn(className, styles['header'])}>
-			<Link to={PAGES_URLS.CHAT_LIST} className={styles['header__back']}>
+			<Button
+				className={cn(styles['header__back'], styles['header__button'])}
+				onClick={() => navigate(PAGES_URLS.CHAT_LIST)}
+			>
 				<ArrowBackIcon />
-			</Link>
+			</Button>
 			<UserInfo />
-			<div className={styles['header__additional']}>
-				<SearchIcon />
-				<MoreIcon />
+			<div
+				className={cn(
+					styles['header__additional'],
+					styles['additional'],
+				)}
+			>
+				<Button
+					className={cn(
+						styles['additional__button'],
+						styles['header__button'],
+					)}
+				>
+					<SearchIcon />
+				</Button>
+				<Button
+					className={cn(
+						styles['additional__button'],
+						styles['header__button'],
+					)}
+				>
+					<MoreIcon />
+				</Button>
 			</div>
 		</div>
 	);

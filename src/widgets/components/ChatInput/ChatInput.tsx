@@ -1,4 +1,4 @@
-import { cn } from '@shared';
+import { Button, cn } from '@shared';
 import styles from './ChatInput.module.scss';
 import { useRef, useState, type KeyboardEvent } from 'react';
 
@@ -26,13 +26,15 @@ export const ChatInput: React.FC<ChatInputProps> = ({ className, onEnter }) => {
 			<input
 				className={styles['input-container__input']}
 				type="text"
-				placeholder="Сообщение"
+				placeholder="Сообщение..."
 				value={inputValue}
 				onChange={onChange}
 				ref={inputRef}
 				onKeyDown={onKeyDown}
 			/>
-			<AttachmentIcon className={styles['input-container__attachment']} />
+			<Button className={styles['input-container__attachment']}>
+				<AttachmentIcon />
+			</Button>
 		</div>
 	);
 };

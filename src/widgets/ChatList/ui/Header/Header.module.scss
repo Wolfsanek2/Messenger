@@ -15,9 +15,18 @@
         font-size: 1.5rem;
     }
 
-    &__icon {
+    &__button {
         height: 80%;
         aspect-ratio: 1 / 1;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: var(--bg-color-primary-hover);
+        }
+
+        &:active {
+            background-color: var(--bg-color-primary-active);
+        }
     }
 }
 

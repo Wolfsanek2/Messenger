@@ -14,5 +14,14 @@
     &__attachment {
         width: 2rem;
         height: 2rem;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: var(--bg-color-tertiary-hover);
+        }
+
+        &:active {
+            background-color: var(--bg-color-tertiary-active);
+        }
     }
 }

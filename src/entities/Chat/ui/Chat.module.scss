@@ -5,7 +5,19 @@
     height: 5rem;
     padding: 0 1rem;
     color: var(--color-primary);
+    font-size: 1rem;
     text-decoration: none;
+    border-bottom: var(--border);
+    background: var(--bg-color-tertiary);
+    transition: background ease 0.1s;
+
+    &:hover {
+        background-color: var(--bg-color-tertiary-hover);
+    }
+
+    &:active {
+        background-color: var(--bg-color-tertiary-active);
+    }
 
     &__main {
         display: flex;
@@ -26,6 +38,15 @@
         height: 100%;
     }
 
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 0.75rem 0;
+    }
+
     &__last-message {
         color: var(--color-secondary);
     }
@@ -36,6 +57,10 @@
         justify-content: center;
         align-items: center;
         width: 4rem;
+    }
+
+    &__time {
+        font-size: 0.75rem;
     }
 
     &__status {

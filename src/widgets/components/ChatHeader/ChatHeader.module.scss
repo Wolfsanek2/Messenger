@@ -11,8 +11,29 @@
     }
 
     &__additional {
-        display: flex;
-        gap: 1rem;
+        height: 100%;
+    }
 
+    &__button {
+        border-radius: 50%;
+
+        &:hover {
+            background-color: var(--bg-color-primary-hover);
+        }
+
+        &:active {
+            background-color: var(--bg-color-primary-active);
+        }
+    }
+}
+
+.additional {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &__button {
+        height: 80%;
+        aspect-ratio: 1 / 1;
     }
 }

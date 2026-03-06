@@ -1,4 +1,4 @@
-import { cn } from '@shared';
+import { Button, cn } from '@shared';
 import styles from './Header.module.scss';
 
 import BurgerIcon from '@shared/assets/icons/burger.svg?react';
@@ -14,10 +14,14 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
 			<div
 				className={cn(styles['left-part'], styles['header__left-part'])}
 			>
-				<BurgerIcon className={styles['header__icon']} />
+				<Button className={styles['header__button']}>
+					<BurgerIcon />
+				</Button>
 				<div className={styles['header__title']}>Messenger</div>
 			</div>
-			<SearchIcon className={styles['header__icon']} />
+			<Button className={styles['header__button']}>
+				<SearchIcon />
+			</Button>
 		</div>
 	);
 };

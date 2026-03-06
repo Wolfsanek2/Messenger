@@ -1,7 +1,7 @@
-import { cn, PAGES_URLS } from '@shared';
+import { Button, cn, PAGES_URLS } from '@shared';
 import styles from './Chat.module.scss';
 import type { ChatData } from '../model';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 import Sent from '@shared/assets/icons/status_sent.svg?react';
 import Read from '@shared/assets/icons/status_read.svg?react';
@@ -12,9 +12,10 @@ interface ChatProps {
 }
 
 export const Chat: React.FC<ChatProps> = ({ className, chatData }) => {
+	const navigate = useNavigate();
 	return (
-		<Link
-			to={PAGES_URLS.chat(chatData.id)}
+		<Button
+			onClick={() => navigate(PAGES_URLS.chat(chatData.id))}
 			className={cn(className, styles['chat'])}
 		>
 			<div className={styles['chat__main']}>
@@ -44,6 +45,6 @@ export const Chat: React.FC<ChatProps> = ({ className, chatData }) => {
 					<Read className={styles['chat__status']} />
 				)}
 			</div>
-		</Link>
+		</Button>
 	);
 };
