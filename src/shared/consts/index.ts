@@ -11,4 +11,5 @@ export const PAGES_URLS = {
 	CHAT_LIST: `${BASE_URL}`,
 	CHAT_TEMPLATE: `${BASE_URL}/:id`,
 	chat: (id: string) => `${BASE_URL}/${id}`,
+	PROFILE: `${BASE_URL}/profile`,
 };

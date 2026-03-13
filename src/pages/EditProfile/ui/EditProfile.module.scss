@@ -1,0 +1,13 @@
+.edit-profile {
+    &__input-list {}
+}
+
+.input-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 5rem;
+
+    &__input {}
+}

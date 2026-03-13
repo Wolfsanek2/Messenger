@@ -1,0 +1,11 @@
+.back-button {
+    border-radius: 50%;
+
+    &:hover {
+        background-color: var(--bg-color-primary-hover);
+    }
+
+    &:active {
+        background-color: var(--bg-color-primary-active);
+    }
+}

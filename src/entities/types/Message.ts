@@ -6,4 +6,5 @@ export interface MessageData {
 	authorName: string;
 	createdAt: string;
 	isMine: boolean;
+	isNew: boolean;
 }

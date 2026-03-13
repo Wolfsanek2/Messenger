@@ -1,6 +1,7 @@
 import type { MessageData } from '@entities';
 import { chatLocalStorageService, MESSAGES_KEY } from '@pages/Chat/services';
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
+import type { ID } from '@shared';
 
 interface ChatSliceState {
 	messages: MessageData[];
@@ -14,6 +15,7 @@ if (!chatLocalStorageService.has(MESSAGES_KEY)) {
 			authorName: 'Дженнифер',
 			createdAt: new Date().toISOString(),
 			isMine: false,
+			isNew: false,
 		},
 		{
 			id: crypto.randomUUID(),
@@ -21,6 +23,7 @@ if (!chatLocalStorageService.has(MESSAGES_KEY)) {
 			authorName: 'Дженнифер',
 			createdAt: new Date().toISOString(),
 			isMine: false,
+			isNew: true,
 		},
 	];
 }
@@ -35,13 +38,14 @@ interface MessagePayload {
 }
 
 export const messagePayloadToMessageData = (
-	payload: MessagePayload
+	payload: MessagePayload,
 ): MessageData => {
 	return {
 		...payload,
 		id: crypto.randomUUID(),
 		authorName: 'my name',
 		createdAt: new Date().toISOString(),
+		isNew: true,
 	};
 };
 
@@ -54,6 +58,14 @@ const slice = createSlice({
 				messagePayloadToMessageData(action.payload),
 				...state.messages,
 			];
+		},
+		removeIsNew: (state, action: PayloadAction<ID>) => {
+			const message = state.messages.find(
+				(message) => message.id === action.payload,
+			);
+			if (message) {
+				message.isNew = false;
+			}
 		},
 	},
 	selectors: {

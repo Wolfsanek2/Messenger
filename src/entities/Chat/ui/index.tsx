@@ -1,7 +1,7 @@
 import { Button, cn, PAGES_URLS } from '@shared';
 import styles from './Chat.module.scss';
 import type { ChatData } from '../model';
-import { Link, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
 import Sent from '@shared/assets/icons/status_sent.svg?react';
 import Read from '@shared/assets/icons/status_read.svg?react';

@@ -28,5 +28,6 @@
 }
 
 .description {
-    @include text-description;
+    font-size: 0.75rem;
+    color: var(--color-tertiary);
 }

@@ -12,7 +12,7 @@ export const Chat: React.FC<ChatProps> = ({ className }) => {
 	const dispatch = useAppDispatch();
 	const messages = useAppSelector(chatSelectors.selectMessages);
 
-	const [isOnBottom, setIsOnBottom] = useState(false);
+	const [isOnBottom, setIsOnBottom] = useState(true);
 
 	useEffect(() => {
 		addEventListener('scroll', () => {

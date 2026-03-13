@@ -41,10 +41,11 @@
     &__text {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: baseline;
+        gap: 0.75rem;
         box-sizing: border-box;
         height: 100%;
-        padding: 0.75rem 0;
     }
 
     &__last-message {

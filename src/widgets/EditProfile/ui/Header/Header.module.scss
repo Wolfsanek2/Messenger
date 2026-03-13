@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: var(--header-height);
+    padding: 0 1rem;
+    background-color: var(--bg-color-header);
+
+    &__button {
+        height: 80%;
+        aspect-ratio: 1 / 1;
+    }
+}

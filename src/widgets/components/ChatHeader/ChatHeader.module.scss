@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: var(--header-height);
+    padding: 0 1rem;
     background-color: var(--bg-color-primary);
-    padding: 1rem;
 
     &__back {
         height: 80%;

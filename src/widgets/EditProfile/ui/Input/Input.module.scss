@@ -1,0 +1,27 @@
+.input-container {
+    &__main {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-bottom: var(--border);
+        border-width: 0.1rem;
+        background-color: var(--bg-color-input);
+    }
+
+    &__title {
+        color: var(--color-secondary);
+    }
+
+    &__input {
+        font-size: 1rem;
+        border: none;
+        background: none;
+    }
+
+    &__description {
+        padding: 0.25rem 1rem;
+        font-size: 0.75rem;
+        color: var(--color-secondary);
+    }
+}
